@@ -14,7 +14,7 @@ export default function Albuns({ navigation }){
 
     const buscar = (listaDeAlbuns) => {
         let listaFiltrada = listaDeAlbuns.filter((item)=> {
-            if(item.album.includes(text) || item.artista.includes(text)){
+            if(item.album.toUpperCase().includes(text.toUpperCase()) || item.artista.toUpperCase().includes(text.toUpperCase())){
                 return item
             } else if (text === ''){
                 return item
